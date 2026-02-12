@@ -1,0 +1,39 @@
+name: Grant Hunter Agent
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  hunt-grants:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Run AI Grant Agent
+      run: python grant_agent.py --auto
+
+    - name: Check for changes
+      id: check_changes
+      run: |
+        git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+
+    - name: Commit and Push New Grants
+      if: steps.check_changes.outputs.changes == 'true'
+      run: |
+        git config --global user.name 'GrantHunterBot'
+        git config --global user.email 'bot@noreply.github.com'
+        git add grants.js
+        git commit -m "🤖 AI Agent found new grants [Auto Update]"
+        git push

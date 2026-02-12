@@ -152,7 +152,28 @@ def smart_funnel_parser():
     print(json.dumps(grant, indent=2))
     return grant
 
+import sys
+
+# ... (rest of imports)
+
+# ... (rest of functions)
+
 def main():
+    # HEADLESS MODE (For GitHub Actions / Cloud Agent)
+    if len(sys.argv) > 1 and sys.argv[1] == '--auto':
+        print("🤖 CLOUD AGENT MODE: Starting automated scan...")
+        new_grant = ai_scan_simulation()
+        if new_grant:
+            grants = load_grants()
+            if not any(g['program_name'] == new_grant['program_name'] for g in grants):
+                grants.insert(0, new_grant)
+                save_grants(grants)
+                print("✅ [AUTO] New grant added to database.")
+            else:
+                print("⚠️ [AUTO] Grant already exists.")
+        return
+
+    # INTERACTIVE MODE
     print("==========================================")
     print("   🤖 GRANT AUTOMATION AGENT v1.0   ")
     print("==========================================")
@@ -192,6 +213,7 @@ def main():
             break
         else:
             print("Invalid command.")
+
 
 if __name__ == "__main__":
     main()
