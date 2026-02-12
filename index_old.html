@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant Opportunities</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --accent-color: #007bff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .program-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 0 0 5px 0;
+        }
+
+        .provider {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .card-body {
+            flex-grow: 1;
+        }
+
+        .detail-row {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #888;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .value {
+            font-size: 0.95rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .card-footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .meta-info {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: right;
+        }
+        
+        .priority-high {
+            border-left: 4px solid #dc3545;
+        }
+        .priority-medium {
+            border-left: 4px solid #ffc107;
+        }
+        .priority-low {
+            border-left: 4px solid #28a745;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Grant Opportunities Dashboard</h1>
+        <p>Explore funding and support programs for your startup</p>
+    </header>
+
+    <div class="container" id="grants-container">
+        <!-- Cards will be injected here by JavaScript -->
+    </div>
+
+    <script>
+        // Embedded JSON data to avoid CORS issues when opening locally
+        const grantsData = [
+          {
+            "program_name": "ELEVATE NXT 2026",
+            "provider": "Government of Karnataka (Startup Karnataka)",
+            "country": "India",
+            "sector_focus": "DeepTech, AI, Data, Health, Energy, Manufacturing",
+            "funding_type": "Grant-in-aid (Non-dilutive)",
+            "funding_amount": "Up to ₹1 Crore",
+            "eligibility_summary": "DPIIT/Karnataka recognized startups. Innovation in DeepTech. MVP/PoC stage.",
+            "deadline": "2026-02-17",
+            "application_link": "https://missionstartupkarnataka.org",
+            "required_documents": ["Pitch Deck", "Incorporation Cert", "DPIIT/Karnataka Recognition", "PoC Validation Details"],
+            "effort_level": "High",
+            "relevance_score": 95,
+            "priority": "High"
+          },
+          {
+            "program_name": "HDFC Parivartan Start-up Grants 2026",
+            "provider": "HDFC Bank",
+            "country": "India",
+            "sector_focus": "Social Impact, AI, DeepTech, Climate, Agriculture, Financial Inclusion",
+            "funding_type": "Grant (Non-dilutive)",
+            "funding_amount": "Varies (Total corpus ₹20 Cr)",
+            "eligibility_summary": "Social impact focus. Innovation in priority sectors. Incubator-partnered application.",
+            "deadline": "2026-02-15",
+            "application_link": "Via Partner Incubators (e.g., IITM, IIMB NSRCEL)",
+            "required_documents": ["Proposal", "Budget Plan", "Incubator Endorsement"],
+            "effort_level": "High",
+            "relevance_score": 90,
+            "priority": "High"
+          },
+          {
+            "program_name": "Startup India Seed Fund Scheme (SISFS)",
+            "provider": "DPIIT / Government of India",
+            "country": "India",
+            "sector_focus": "Sector Agnostic (Tech preferred)",
+            "funding_type": "Grant (up to ₹20L) & Debt/Convertible (up to ₹50L)",
+            "funding_amount": "INR 20 Lakhs (Grant) + INR 50 Lakhs (Investment)",
+            "eligibility_summary": "DPIIT Recognized, <2 years old, Business idea to commercialization stage.",
+            "deadline": "Open All Year",
+            "application_link": "https://seedfund.startupindia.gov.in",
+            "required_documents": ["DPIIT Recognition", "Pitch Deck", "Video Pitch", "Cap Table"],
+            "effort_level": "Medium",
+            "relevance_score": 85,
+            "priority": "High"
+          },
+          {
+            "program_name": "Microsoft for Startups Founders Hub",
+            "provider": "Microsoft",
+            "country": "Global (Active in India)",
+            "sector_focus": "Technology, AI, SaaS",
+            "funding_type": "Credits & Resources (Non-dilutive)",
+            "funding_amount": "$1,000 - $150,000 (Credits)",
+            "eligibility_summary": "Tech-based startups. Pre-Series B. No funding required for entry tier.",
+            "deadline": "Open All Year",
+            "application_link": "https://foundershub.startups.microsoft.com",
+            "required_documents": ["LinkedIn Profile", "Company Website", "Pitch Deck (optional for low tier)"],
+            "effort_level": "Low",
+            "relevance_score": 80,
+            "priority": "Medium"
+          },
+          {
+            "program_name": "AWS Activate",
+            "provider": "Amazon Web Services",
+            "country": "Global (Active in India)",
+            "sector_focus": "Technology",
+            "funding_type": "Credits (Non-dilutive)",
+            "funding_amount": "$1,000 - $100,000 (Credits)",
+            "eligibility_summary": "Bootstrapped (Founders tier) or Provider-affiliated (Portfolio tier). <10 years old.",
+            "deadline": "Open All Year",
+            "application_link": "https://aws.amazon.com/activate",
+            "required_documents": ["Company Website", "AWS Account ID", "Org ID (for Portfolio)"],
+            "effort_level": "Low",
+            "relevance_score": 75,
+            "priority": "Medium"
+          }
+        ];
+
+        function renderGrants(grants) {
+            const container = document.getElementById('grants-container');
+            container.innerHTML = '';
+
+            grants.forEach(grant => {
+                const priorityClass = `priority-${grant.priority.toLowerCase()}`;
+                
+                // Parse sector focus into tags if it helps
+                const sectors = grant.sector_focus.split(',').map(s => s.trim());
+
+                const card = document.createElement('div');
+                card.className = `card ${priorityClass}`;
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <h2 class="program-name">${grant.program_name}</h2>
+                        <div class="provider">${grant.provider}</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="detail-row">
+                            <span class="label">Funding</span>
+                            <div class="value">${grant.funding_amount} (${grant.funding_type})</div>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Deadline</span>
+                            <div class="value" style="color: ${getDeadlineColor(grant.deadline)}">${grant.deadline}</div>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Eligibility</span>
+                            <div class="value">${grant.eligibility_summary}</div>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Sectors</span>
+                            <div class="tags">
+                                ${sectors.map(sector => `<span class="tag">${sector}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${grant.application_link}" target="_blank" class="btn">Apply Now</a>
+                        <div class="meta-info">
+                            <div>Score: ${grant.relevance_score}</div>
+                            <div>Effort: ${grant.effort_level}</div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function getDeadlineColor(deadline) {
+            if (deadline.toLowerCase().includes('open')) return 'green';
+            const today = new Date();
+            const date = new Date(deadline);
+            const diffTime = date - today;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            if (diffDays < 7) return '#dc3545'; // Red for urgency
+            if (diffDays < 30) return '#ffc107'; // Yellow/Orange for upcoming
+            return 'green';
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGrants(grantsData);
+        });
+
+    </script>
+</body>
+</html>
