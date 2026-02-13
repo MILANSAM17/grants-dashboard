@@ -1,5 +1,22 @@
 window.grantsData = [
   {
+    "program_name": "NVIDIA Inception Program",
+    "provider": "NVIDIA",
+    "country": "Global",
+    "sector_focus": "AI, Data Science",
+    "funding_type": "Hardware Discounts & Credits",
+    "funding_amount": "Varies",
+    "eligibility_summary": "AI/Data Science startups.",
+    "deadline": "Open All Year",
+    "application_link": "https://www.nvidia.com/en-us/startups/",
+    "required_documents": [
+      "Company Details"
+    ],
+    "effort_level": "Low",
+    "relevance_score": 88,
+    "priority": "Medium"
+  },
+  {
     "program_name": "Y Combinator W26 Batch",
     "provider": "Y Combinator",
     "country": "Global (US based)",
