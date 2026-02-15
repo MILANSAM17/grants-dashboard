@@ -1,5 +1,23 @@
 window.grantsData = [
   {
+    "program_name": "Google for Startups Cloud Program",
+    "provider": "Google Cloud",
+    "country": "Global",
+    "sector_focus": "AI, Web3, SaaS",
+    "funding_type": "Credits (Non-dilutive)",
+    "funding_amount": "Up to $350,000 (Credits)",
+    "eligibility_summary": "Series A or lower. Verified domain.",
+    "deadline": "Open All Year",
+    "application_link": "https://cloud.google.com/startup",
+    "required_documents": [
+      "Company Domain",
+      "Funding Proof"
+    ],
+    "effort_level": "Low",
+    "relevance_score": 98,
+    "priority": "High"
+  },
+  {
     "program_name": "NVIDIA Inception Program",
     "provider": "NVIDIA",
     "country": "Global",
