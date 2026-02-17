@@ -1,85 +1,5 @@
 window.grantsData = [
   {
-    "program_name": "Fast Track High Score Grant",
-    "provider": "Test Provider",
-    "country": "Global",
-    "sector_focus": "General",
-    "funding_type": "Grant",
-    "funding_amount": "$100,000",
-    "eligibility_summary": "Open to all.",
-    "deadline": "2026-03-01",
-    "application_link": "https://example.com",
-    "source_category": "Gov",
-    "effort_level": "Low",
-    "id": "c60f21ae534274b9e59585286ed8bb12",
-    "relevance_score": 95,
-    "priority": "HIGH",
-    "status": "Not Applied",
-    "notes": "",
-    "added_date": "2026-02-17",
-    "last_updated": "2026-02-17"
-  },
-  {
-    "program_name": "OpenAI Residency",
-    "provider": "OpenAI",
-    "country": "US (Remote Friendly)",
-    "sector_focus": "AI, ML Research",
-    "funding_type": "Salary + Equity",
-    "funding_amount": "$210,000 / year",
-    "eligibility_summary": "Exceptional researchers.",
-    "deadline": "2026-06-01",
-    "application_link": "https://openai.com/careers",
-    "source_category": "Private",
-    "effort_level": "High",
-    "id": "64149b106b0938cafb01aaaf477884d4",
-    "relevance_score": 81,
-    "priority": "MEDIUM",
-    "status": "Not Applied",
-    "notes": "",
-    "added_date": "2026-02-17",
-    "last_updated": "2026-02-17"
-  },
-  {
-    "program_name": "Horizon Europe EIC Accelerator",
-    "provider": "European Commission",
-    "country": "Europe",
-    "sector_focus": "DeepTech, GreenTech, Health",
-    "funding_type": "Grant + Equity",
-    "funding_amount": "Up to \u20ac2.5M Grant + \u20ac15M Equity",
-    "eligibility_summary": "SMEs with radical innovation.",
-    "deadline": "2026-06-05",
-    "application_link": "https://eic.ec.europa.eu",
-    "source_category": "Gov",
-    "effort_level": "Extreme",
-    "id": "67c852af3b405e90cbe6ae9f0f574937",
-    "relevance_score": 90,
-    "priority": "HIGH",
-    "status": "Not Applied",
-    "notes": "",
-    "added_date": "2026-02-17",
-    "last_updated": "2026-02-17"
-  },
-  {
-    "program_name": "Google for Startups Cloud Program",
-    "provider": "Google Cloud",
-    "country": "Global",
-    "sector_focus": "AI, Web3, SaaS",
-    "funding_type": "Credits (Non-dilutive)",
-    "funding_amount": "Up to $350,000 (Credits)",
-    "eligibility_summary": "Series A or lower. Verified domain.",
-    "deadline": "Open All Year",
-    "application_link": "https://cloud.google.com/startup",
-    "source_category": "Private",
-    "effort_level": "Low",
-    "id": "b0d4670477b663ff4d0e431fa6cc121e",
-    "relevance_score": 82,
-    "priority": "MEDIUM",
-    "status": "Not Applied",
-    "notes": "",
-    "added_date": "2026-02-17",
-    "last_updated": "2026-02-17"
-  },
-  {
     "program_name": "Y Combinator W26 Batch",
     "provider": "Y Combinator",
     "country": "Global (US based)",
@@ -87,18 +7,15 @@ window.grantsData = [
     "funding_type": "Equity Investment",
     "funding_amount": "$500,000",
     "eligibility_summary": "Early stage. High growth potential.",
-    "deadline": "2026-04-15",
+    "deadline": "2026-03-30",
     "application_link": "https://www.ycombinator.com/apply",
     "required_documents": [
       "Founder Video",
       "Demo"
     ],
     "effort_level": "High",
-    "relevance_score": 80,
-    "priority": "MEDIUM",
-    "id": "7694cc7872f2f8cb44c16ea7def69320",
-    "source_category": "Accelerator",
-    "last_updated": "2026-02-17"
+    "relevance_score": 92,
+    "priority": "High"
   },
   {
     "program_name": "ELEVATE NXT 2026",
@@ -118,8 +35,7 @@ window.grantsData = [
     ],
     "effort_level": "High",
     "relevance_score": 95,
-    "priority": "High",
-    "id": "81d4e2723ee4c92ec61c04056fe84650"
+    "priority": "High"
   },
   {
     "program_name": "HDFC Parivartan Start-up Grants 2026",
@@ -138,8 +54,7 @@ window.grantsData = [
     ],
     "effort_level": "High",
     "relevance_score": 90,
-    "priority": "High",
-    "id": "586f4b966adb336c09acb8730a20cb78"
+    "priority": "High"
   },
   {
     "program_name": "Startup India Seed Fund Scheme (SISFS)",
@@ -159,8 +74,7 @@ window.grantsData = [
     ],
     "effort_level": "Medium",
     "relevance_score": 85,
-    "priority": "High",
-    "id": "201cc53a99737c0b6245445bb18a2701"
+    "priority": "High"
   },
   {
     "program_name": "Microsoft for Startups Founders Hub",
@@ -179,8 +93,7 @@ window.grantsData = [
     ],
     "effort_level": "Low",
     "relevance_score": 80,
-    "priority": "Medium",
-    "id": "8220761cfd77e442346b085d43c93ae7"
+    "priority": "Medium"
   },
   {
     "program_name": "AWS Activate",
@@ -199,7 +112,6 @@ window.grantsData = [
     ],
     "effort_level": "Low",
     "relevance_score": 75,
-    "priority": "Medium",
-    "id": "3a4227e5d61fbdb304af25240f372906"
+    "priority": "Medium"
   }
 ];

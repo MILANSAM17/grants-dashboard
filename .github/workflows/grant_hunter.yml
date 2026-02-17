@@ -22,7 +22,8 @@ jobs:
         python-version: '3.9'
 
     - name: Run AI Grant Agent
-      run: python grant_agent.py --auto
+      run: |
+        python grant_agent.py --auto
 
     - name: Check for changes
       id: check_changes
@@ -34,6 +35,6 @@ jobs:
       run: |
         git config --global user.name 'GrantHunterBot'
         git config --global user.email 'bot@noreply.github.com'
-        git add grants.js
+        git add grants.js logs/agent_log.json
         git commit -m "🤖 AI Agent found new grants [Auto Update]"
         git push
