@@ -365,6 +365,7 @@ def ai_scan_simulation(manager):
             "effort_level": "Medium",
             "awards_available": "20 Fellows",
             "open_date": "Rolling"
+        },
         {
             "program_name": "Epic Games MegaGrants",
             "provider": "Epic Games",
@@ -424,6 +425,66 @@ def ai_scan_simulation(manager):
             "effort_level": "High",
             "awards_available": "40 Teams",
             "open_date": "2026-03-01"
+        },
+        {
+            "program_name": "Apple Entrepreneur Camp",
+            "provider": "Apple",
+            "country": "Global",
+            "sector_focus": "App Dev, iOS",
+            "funding_type": "Mentorship + Hardware",
+            "funding_amount": "Unknown",
+            "eligibility_summary": "Underrepresented founders building apps.",
+            "deadline": "2026-09-01", 
+            "application_link": "https://developer.apple.com/entrepreneur-camp/",
+            "source_category": "Corporate",
+            "effort_level": "Medium",
+            "awards_available": "Varies",
+            "open_date": "Rolling"
+        },
+        {
+            "program_name": "Google Play Indie Games Fund",
+            "provider": "Google Play",
+            "country": "Latin America",
+            "sector_focus": "App Dev, Gaming",
+            "funding_type": "Grant + Support",
+            "funding_amount": "$2,000,000 Fund",
+            "eligibility_summary": "Indie game studios and app developers.",
+            "deadline": "2026-08-15", 
+            "application_link": "https://developer.android.com/distribute/google-play/indie-games-fund",
+            "source_category": "Corporate",
+            "effort_level": "High",
+            "awards_available": "10 Studios",
+            "open_date": "2026-06-01"
+        },
+        {
+            "program_name": "Apple Entrepreneur Camp",
+            "provider": "Apple",
+            "country": "Global",
+            "sector_focus": "App Dev, iOS",
+            "funding_type": "Mentorship + Hardware",
+            "funding_amount": "Unknown",
+            "eligibility_summary": "Underrepresented founders building apps.",
+            "deadline": "2026-09-01", 
+            "application_link": "https://developer.apple.com/entrepreneur-camp/",
+            "source_category": "Corporate",
+            "effort_level": "Medium",
+            "awards_available": "Varies",
+            "open_date": "Rolling"
+        },
+        {
+            "program_name": "Google Play Indie Games Fund",
+            "provider": "Google Play",
+            "country": "Latin America",
+            "sector_focus": "App Dev, Gaming",
+            "funding_type": "Grant + Support",
+            "funding_amount": "$2,000,000 Fund",
+            "eligibility_summary": "Indie game studios and app developers.",
+            "deadline": "2026-08-15", 
+            "application_link": "https://developer.android.com/distribute/google-play/indie-games-fund",
+            "source_category": "Corporate",
+            "effort_level": "High",
+            "awards_available": "10 Studios",
+            "open_date": "2026-06-01"
         }
     ]
     
