@@ -34,5 +34,11 @@
     "grants_scanned": 2,
     "grants_added": 0,
     "errors": []
+  },
+  {
+    "timestamp": "2026-02-26T02:12:11.613523",
+    "grants_scanned": 14,
+    "grants_added": 10,
+    "errors": []
   }
 ]
