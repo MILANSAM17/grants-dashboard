@@ -1,11 +1,5 @@
 [
   {
-    "timestamp": "2026-06-21T04:21:40.566684",
-    "grants_scanned": 14,
-    "grants_added": 0,
-    "errors": []
-  },
-  {
     "timestamp": "2026-06-22T04:24:05.269469",
     "grants_scanned": 14,
     "grants_added": 0,
@@ -295,6 +289,12 @@
   },
   {
     "timestamp": "2026-08-09T01:48:26.302926",
+    "grants_scanned": 14,
+    "grants_added": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-08-10T01:52:49.848844",
     "grants_scanned": 14,
     "grants_added": 0,
     "errors": []
